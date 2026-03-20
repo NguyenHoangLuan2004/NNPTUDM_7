@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NNPTUD_7 - Product Inventory API
 
 ## 1. Cài đặt
@@ -67,3 +68,7 @@ npm run dev
 ## 6. Lưu ý
 
 File zip người dùng tải lên đang rỗng, nên phần source này được tạo mới hoàn toàn bên trong thư mục `NNPTUD_7`.
+=======
+Nguyễn Hoàng Luân 
+2280601854
+>>>>>>> f88d9aed2cc33b64cf0228f84ef45b7899204715
