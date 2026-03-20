@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "NNPTUD_7 Inventory API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"IPhone 15 Pro Max\",\n  \"sku\": \"IP15PM-001\",\n  \"price\": 32990000,\n  \"description\": \"Bản 256GB\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Get All Inventories",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/inventories",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "inventories"]
+        }
+      }
+    },
+    {
+      "name": "Get Inventory By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/inventories/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "inventories", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Add Stock",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": \"PRODUCT_OBJECT_ID\",\n  \"quantity\": 10\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/inventories/add-stock",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "inventories", "add-stock"]
+        }
+      }
+    },
+    {
+      "name": "Remove Stock",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": \"PRODUCT_OBJECT_ID\",\n  \"quantity\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/inventories/remove-stock",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "inventories", "remove-stock"]
+        }
+      }
+    },
+    {
+      "name": "Reservation",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": \"PRODUCT_OBJECT_ID\",\n  \"quantity\": 3\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/inventories/reservation",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "inventories", "reservation"]
+        }
+      }
+    },
+    {
+      "name": "Sold",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": \"PRODUCT_OBJECT_ID\",\n  \"quantity\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/inventories/sold",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "inventories", "sold"]
+        }
+      }
+    }
+  ]
+}
