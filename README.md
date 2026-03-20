@@ -1,74 +1,47 @@
-<<<<<<< HEAD
 # NNPTUD_7 - Product Inventory API
+# Nguyễn Hoàng Luân - 2280601854 
+API quản lý kho sản phẩm dùng Node.js, Express.js và MongoDB.
 
-## 1. Cài đặt
+## Chức năng
+- Tạo product và tự động tạo inventory tương ứng
+- Lấy tất cả inventory
+- Lấy inventory theo ID có join product
+- Add stock
+- Remove stock
+- Reservation
+- Sold
 
+## Cài đặt
 ```bash
 npm install
-cp .env.example .env
-```
-
-Chỉnh `.env` nếu cần:
-
-```env
+copy .env.example .env
+File .env
 PORT=3000
 MONGODB_URI=mongodb://127.0.0.1:27017/nnptud_7
-```
-
-## 2. Chạy project
-
-```bash
+Chạy project
 npm run dev
-```
+API
 
-## 3. API đã làm
+POST /api/products
 
-### Product
-- `POST /api/products` → tạo product, đồng thời tự tạo inventory tương ứng
-- `GET /api/products` → lấy danh sách product
+GET /api/inventories
 
-### Inventory
-- `GET /api/inventories` → lấy toàn bộ inventory, có populate product
-- `GET /api/inventories/:id` → lấy inventory theo ID, có populate product
-- `POST /api/inventories/add-stock` → tăng stock
-- `POST /api/inventories/remove-stock` → giảm stock
-- `POST /api/inventories/reservation` → giảm stock, tăng reserved
-- `POST /api/inventories/sold` → giảm reserved, tăng soldCount
+GET /api/inventories/:id
 
-## 4. Body mẫu
+POST /api/inventories/add-stock
 
-### Tạo product
-```json
-{
-  "name": "IPhone 15 Pro Max",
-  "sku": "IP15PM-001",
-  "price": 32990000,
-  "description": "Bản 256GB"
-}
-```
+POST /api/inventories/remove-stock
 
-### Add stock / Remove stock / Reservation / Sold
-```json
-{
-  "product": "PRODUCT_OBJECT_ID",
-  "quantity": 5
-}
-```
+POST /api/inventories/reservation
 
-## 5. Gợi ý test trên Postman
+POST /api/inventories/sold
 
-1. Tạo product trước.
-2. Copy `_id` của product vừa tạo.
-3. Gọi `add-stock` để tăng kho.
-4. Gọi `remove-stock` để giảm kho.
-5. Gọi `reservation` để giữ hàng.
-6. Gọi `sold` để chốt bán.
-7. Gọi `get all inventories` và `get inventory by id` để kiểm tra.
+Tài liệu
 
-## 6. Lưu ý
+Thư mục docs gồm:
 
-File zip người dùng tải lên đang rỗng, nên phần source này được tạo mới hoàn toàn bên trong thư mục `NNPTUD_7`.
-=======
-Nguyễn Hoàng Luân 
-2280601854
->>>>>>> f88d9aed2cc33b64cf0228f84ef45b7899204715
+File Word báo cáo test API
+
+File Postman collection
+
+Ảnh chụp test Postman
